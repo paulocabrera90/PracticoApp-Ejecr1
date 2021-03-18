@@ -24,19 +24,19 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String[]{Manifest.permission.CALL_PHONE},1000);
         }
 
-       // IntentFilter filter = new IntentFilter();
-        //filter.addAction("android.hardware.usb.action.USB_STATE");
+      IntentFilter filter = new IntentFilter();
+      // filter.addAction("android.hardware.usb.action.USB_STATE");
 
-       // IntentFilter filter = new IntentFilter();
-       //filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
-    //    registerReceiver(mr, filter);
+     //  IntentFilter filter = new IntentFilter();
+       filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
+       registerReceiver(mr, filter);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         mr = new MensajeRecibido();
-       registerReceiver(mr, new IntentFilter(UsbManager.ACTION_USB_DEVICE_DETACHED));
+       registerReceiver(mr, new IntentFilter("android.hardware.usb.action.USB_STATE"));
     }
 
     @Override

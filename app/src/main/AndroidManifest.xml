@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.practicoapp_ejecr1">
     <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.hardware.usb.action.USB_STATE"></uses-permission>
+
 
     <application
         android:allowBackup="true"
