@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
       IntentFilter filter = new IntentFilter();
-      // filter.addAction("android.hardware.usb.action.USB_STATE");
+    //   filter.addAction("android.hardware.usb.action.USB_STATE");
 
-     //  IntentFilter filter = new IntentFilter();
+       // filter = new IntentFilter();
        filter.addAction(UsbManager.ACTION_USB_DEVICE_DETACHED);
        registerReceiver(mr, filter);
     }
